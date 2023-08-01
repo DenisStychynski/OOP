@@ -3,6 +3,8 @@ package Seminar.Seminar1;
 import java.util.ArrayList;
 import java.util.List;
 
+import Seminar.Seminar2.Order;
+
 public class Automat {
     List<Product> listProduct = new ArrayList<>() ;
    
@@ -30,5 +32,12 @@ if (el.getName() == name) {
     
 }return null;
 }
-
+public Order createOrder(ArrayList<Product> shoppingList){
+return null;
 }
+
+
+
+public void initProduct(Beverage tea, Beverage coffee, Beverage cocoa, Product product1, Product product2,
+    Product product3) {
+}}

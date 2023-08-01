@@ -46,6 +46,9 @@ public void setQuantity(int quantity) {
 public String toString() {
     return "Product [name=" + name + ", price=" + price + ", quantity=" + quantity + ", bestBefore=" +"/"+ bestBefore.get(Calendar.YEAR) + "]";
 }
+public double getMoney() {
+    return 0;
+}
 
 
 
