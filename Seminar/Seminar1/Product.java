@@ -49,10 +49,4 @@ public String toString() {
 public double getMoney() {
     return 0;
 }
-
-
-
-
-
 }
-

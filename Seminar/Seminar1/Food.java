@@ -17,6 +17,16 @@ public class Food extends Product  {
     public double getWeight() {
         return weight;
     }
+    public int compareTo(Food other){
+        if (this.weight == other.getWeight()){
+            return 0;
+        }else if (this.weight < other.getWeight()){
+            return -1;
+        } else{
+            return 1;
+        }
+    
+    }
 }
   
     

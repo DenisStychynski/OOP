@@ -15,6 +15,15 @@ public int getTemperature() {
 public String toString() {
     return "HotBeverage [ name=" + name + ", price=" + price + ", volume=" + volume + "temperature=" + temperature + "]";
 }
+public int compareTo(HotBeverage other){
+    if (this.temperature == other.getTemperature()){
+        return 0;
+    }else if (this.temperature < other.getTemperature()){
+        return -1;
+    }else{
+        return 1;
+    }
 
 
+}
 }
