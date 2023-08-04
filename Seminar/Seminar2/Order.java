@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import javax.swing.text.html.HTMLDocument.Iterator;
+import java.util.Iterator;
 
 import Seminar.Seminar1.Beverage;
 import Seminar.Seminar1.Product;
@@ -42,15 +42,16 @@ public String toString(){
 StringBuilder sb =new StringBuilder();
 sb.append("Заказчик: ").append(man.getName()).append("n");
 sb.append("Состав заказа: n");
-}
+
 
 
 
 sb.append("Общая стоимость: ").append("n");
-return sb . toString();
+return sb . toString();}
 
 
 public void validateOrder(){
+    
     Iterator<Map.Entry<Product,Integer>> iterator = items.entrySet().iterator();
     while (iterator.hasNext()) {
         Map.Entry<Product,Integer> entry = iterator.next();
@@ -75,5 +76,3 @@ public void checkour() {
 }
 
 }
-
-

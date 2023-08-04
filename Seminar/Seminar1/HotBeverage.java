@@ -1,6 +1,6 @@
 package Seminar.Seminar1;
 public class HotBeverage extends Beverage {
-    private int temperature;
+    protected int temperature;
 
     public HotBeverage (String name, double price, double volume, int temperature){
     super(name,price,volume);

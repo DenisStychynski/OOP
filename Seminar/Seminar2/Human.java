@@ -3,6 +3,9 @@ package Seminar.Seminar2;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
+
+import javax.print.attribute.standard.MediaSize.Other;
+
 import Seminar.Seminar1.Automat;
 import Seminar.Seminar1.Beverage;
 import Seminar.Seminar1.Food;
@@ -58,7 +61,7 @@ public void setMoney(double money){
        this.nearestAutomat = automat;
     }  
    
-    public Order makeOrder(List<String> deList) {
+    public Other makeOrder(List<String> deList) {
         ArrayList<Product> shoppingList = new ArrayList<>();
         Product shoppingProduct;
        for (String nameProduct : deList){

@@ -20,7 +20,7 @@ public class Program {
 public static void main(String[] args) {
     Beverage tea = new HotBeverage("Tea", 1.5, 200, 85);
     Beverage coffee = new HotBeverage("Coffee", 2.0, 250, 90);
-    Product cocoa = new HotBeverage("Cocoa", 2.5, 300, 80);
+    Beverage cocoa = new HotBeverage("Cocoa", 2.5, 300, 80);
     Beverage[] beverages ={tea,coffee,cocoa};
     HotBeverageAutomat hotBeverageAutomat = new HotBeverageAutomat(beverages);
     HotBeverage teaFromAutomat = hotBeverageAutomat.getProduct("Tea", 200, 85);
@@ -81,7 +81,7 @@ for (Product product : products){
 Order order = new Order();
 order.addItem(product1, 2);
 order.addItem(product2, 4);
-order.addItem(cocoa, 15);
+order.addItem(product3, 15);
 order.validateOrder();
 order.checkour();
     }

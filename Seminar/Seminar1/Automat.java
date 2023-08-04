@@ -3,7 +3,8 @@ package Seminar.Seminar1;
 import java.util.ArrayList;
 import java.util.List;
 
-import Seminar.Seminar2.Order;
+import javax.print.attribute.standard.MediaSize.Other;
+
 
 public class Automat {
     List<Product> listProduct = new ArrayList<>() ;
@@ -32,7 +33,7 @@ if (el.getName() == name) {
     
 }return null;
 }
-public Order createOrder(ArrayList<Product> shoppingList){
+public Other createOrder(ArrayList<Product> shoppingList){
 return null;
 }
 

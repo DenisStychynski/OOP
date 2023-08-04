@@ -3,6 +3,8 @@ package Seminar.Seminar2;
 
 import java.util.List;
 
+import javax.print.attribute.standard.MediaSize.Other;
+
 
 
 public interface ActorBehavoir {
@@ -10,6 +12,6 @@ public interface ActorBehavoir {
     void setMake_order(boolean d);
     boolean getTook_order();
  boolean getMade_order();
-Order makeOrder(List<String> my_List);
+Other makeOrder(List<String> my_List);
 
 }
