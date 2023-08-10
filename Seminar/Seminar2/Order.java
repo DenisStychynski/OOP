@@ -75,4 +75,10 @@ public void addItem(Product product2, int i) {
 public void checkour() {
 }
 
+public void addProduct(T product){
+    product.add(product);
+}
+Order mixedOrder = new Order();
+mixedOrder.addProduct(new Food("Хлеб"));
+mixedOrder.addProduct(new Beverage("Вода"));
 }

@@ -49,4 +49,8 @@ public String toString() {
 public double getMoney() {
     return 0;
 }
+
+public void addProduct(Product product){
+
+}
 }
