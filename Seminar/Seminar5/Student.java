@@ -1,15 +1,43 @@
 package Seminar.Seminar5;
 
+import java.util.Calendar;
 
+public class Student extends User{
+    private static int id = 1;
+    private String group;
+    private String speciality;
+    private double averageMark;
+    public Student( String name, String lastName, Calendar birthday, String group, String speciality,
+            double averageMark) {
+        super(name, lastName, birthday);
+        this.id = id++;
+        this.group = group;
+        this.speciality = speciality;
+        this.averageMark = averageMark;
+    }
+    public static int getId() {
+        return id;
+    }
+    public String getGroup() {
+        return group;
+    }
+    public String getSpeciality() {
+        return speciality;
+    }
+    public double getAverageMark() {
+        return averageMark;
+    }
+    public void setAverageMark(double averageMark) {
+        this.averageMark = averageMark;
+    }
 
-public class Student extends UserService {
- 
-public Student( String name1, int id, int age){
-    super(name1,id,age);
-    
-}
-@Override
-public String toString(){
-    return "Имя: " +getName1() + "Возраст: " + getAge() + "Идентификационный номер:" +getId();
-}
+    public void setGroup(String group) {
+        this.group = group;
+    }
+
+    @Override
+    public String toString(){
+            return "Студент:  Имя: " + getName() + "  Фамилия: " + getLastName() + "  Группа: " + group + "  Оценка: " + averageMark+"\n";
+    }
+
 }

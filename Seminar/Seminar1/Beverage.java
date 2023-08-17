@@ -1,30 +1,34 @@
 package Seminar.Seminar1;
 
-public class Beverage {
+import java.util.Calendar;
 
-    protected String name;
-    protected double price;
-    protected double volume;
+public class Beverage extends Product {
+        //- Open-closed principle (Принцип открытости/закрытости)
+        // Можно добавить другие характеристики напитков не меняя реализацию класса
+        
+        // - Single responsibility principle (Принцип единственной ответственности)
+        // Конструктор объектов класса напитков
+                                                    
+    private double volume;
 
-    public Beverage(String name, double price, double volume) {
-        this.name = name;
-        this.price = price;
+     public Beverage(int id, String name, int price, int quantity, Calendar best_before, double volume ){
+        super(id, name, price, quantity, best_before);
         this.volume = volume;
-
     }
-    public String getName(){
-        return name;
-    }
-    public double getPrice() {
-        return price;
-    }
+    
     public double getVolume() {
         return volume;
     }
+    
+        
+
     @Override
-    public String toString() {
-        return "Beverage [name=" + name + ", price=" + price + ", volume=" + volume + "]";
+    public String toString(){
+        
+        return "\n"+"ID: "+getID()+"  "+getName() + "  Цена: " + getPrice() + "  Кол-во: " + getQuantity() + "  Объем: " + volume 
+                              + "  Годен до: " +getBest_before().get(Calendar.DAY_OF_MONTH) +"."+ getBest_before().get(Calendar.MONTH)
+                              +"." + getBest_before().get(Calendar.YEAR) ;
     }
-  
-  
+
+
 }

@@ -1,29 +1,32 @@
 package Seminar.Seminar1;
-public class HotBeverage extends Beverage {
-    protected int temperature;
 
-    public HotBeverage (String name, double price, double volume, int temperature){
-    super(name,price,volume);
-    this.temperature = temperature;
+import java.util.Calendar;
 
+public class HotBeverage extends Beverage{
+    //- Liskov substitution principle (Принцип подстановки Лисков)
+    // Класс горячие напитки не меняет поведение класса напитки
 
-}
-public int getTemperature() {
-    return temperature;
-}
-@Override
-public String toString() {
-    return "HotBeverage [ name=" + name + ", price=" + price + ", volume=" + volume + "temperature=" + temperature + "]";
-}
-public int compareTo(HotBeverage other){
-    if (this.temperature == other.getTemperature()){
-        return 0;
-    }else if (this.temperature < other.getTemperature()){
-        return -1;
-    }else{
-        return 1;
+    // - Single responsibility principle (Принцип единственной ответственности)
+    // Конструктор объектов класса  горячих напитков
+
+    private int temperature;
+
+    public HotBeverage(int id, String name, int price, int quantity, Calendar best_before, double volume, int temperature ){
+        super(id, name, price, quantity, best_before, volume);
+        this.temperature = temperature;
+    }
+    public int getTemperature() {
+        return temperature;
     }
 
 
-}
+    @Override
+    public String toString(){
+        
+        return "\n"+"ID: "+getID()+"  "+getName() + "  Цена: " + getPrice() + "  Кол-во: " + getQuantity() + "  Объем: " + getVolume() + "  Температура: " + temperature 
+                              + "  Годен до: " +getBest_before().get(Calendar.DAY_OF_MONTH) +"."+ getBest_before().get(Calendar.MONTH)
+                              +"." + getBest_before().get(Calendar.YEAR) ;
+    }
+
+
 }

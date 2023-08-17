@@ -2,33 +2,24 @@ package Seminar.Seminar1;
 
 import java.util.Calendar;
 
-public class Food extends Product  {
-  
-    protected double weight;
-    
-  
-    public Food (String name, double price, double weight,int quantity, Calendar bestBefore){
-        super(name, price, quantity, bestBefore);
+public class Food  extends Product{     // - Single responsibility principle (Принцип единственной ответственности)
+                                                // Конструктор объектов класса еда
+    private int weight;
+
+    public Food(int id, String name, int price, int quantity, Calendar best_before, int weight){
+        super(id, name, price, quantity, best_before);
         this.weight = weight;
-        
     }
-   
-    
-    public double getWeight() {
+    public int getWeight() {                
+
         return weight;
     }
-    public int compareTo(Food other){
-        if (this.weight == other.getWeight()){
-            return 0;
-        }else if (this.weight < other.getWeight()){
-            return -1;
-        } else{
-            return 1;
-        }
-    
+
+    @Override
+    public String toString(){
+        
+        return "\n"+"ID: "+getID()+"  "+getName() + "  Цена: " + getPrice() + "  Кол-во: " + getQuantity() + " Масса: " + weight 
+                              + "  Годен до: " +getBest_before().get(Calendar.DAY_OF_MONTH) +"."+ getBest_before().get(Calendar.MONTH)
+                              +"." + getBest_before().get(Calendar.YEAR) ;
     }
 }
-  
-    
-  
-
